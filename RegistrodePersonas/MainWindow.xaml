@@ -15,11 +15,11 @@
         <Label Content="Cedula" Margin="24,180,150,205" FontSize="16" FontWeight="Bold"/>
         <Label Content="Direccion" Margin="24,234,150,151" FontSize="16" FontWeight="Bold"/>
         <Label Content="Fecha de Nacimiento" Margin="24,283,85,102" FontSize="16" FontWeight="Bold"/>
-        <DatePicker Margin="18,320,18,75"/>        
+        <DatePicker x:Name="nacimiento" Margin="18,320,18,75"/>        
         
 
         <StackPanel Orientation="Horizontal">
-            <Button VerticalAlignment="Top" Width="125" Margin="190,20,0,0" Height="34" FontWeight="Bold" FontSize="16">
+            <Button VerticalAlignment="Top" Width="125" Margin="190,20,0,0" Height="34" FontWeight="Bold" FontSize="16" Click="BuscarButton_Click" >
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/Resources/busca.png" Height="30"/>
                     <Label Content="Buscar"/>
@@ -28,7 +28,7 @@
         </StackPanel>
 
         <StackPanel Orientation="Horizontal">
-            <Button HorizontalAlignment="Left" Margin="10,375,0,0" VerticalAlignment="Top" Width="100" Height="34" FontWeight="Bold" FontSize="18">
+            <Button HorizontalAlignment="Left" Margin="10,375,0,0" VerticalAlignment="Top" Width="100" Height="34" FontWeight="Bold" FontSize="18" Click="NuevoButton_Click">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/Resources/nuevo.png" Height="20"/>
                     <Label Content="Nuevo"/>                    
@@ -37,7 +37,7 @@
         </StackPanel>
 
         <StackPanel Orientation="Horizontal">
-            <Button HorizontalAlignment="Left" Margin="125,375,0,0" VerticalAlignment="Top" Width="100" Height="34" FontWeight="Bold" FontSize="18">
+            <Button HorizontalAlignment="Left" Margin="125,375,0,0" VerticalAlignment="Top" Width="100" Height="34" FontWeight="Bold" FontSize="18" Click="GuardarButton_Click">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/Resources/guarda.png" Height="20"/>
                     <Label Content="Guardar"/>                    
@@ -46,7 +46,7 @@
         </StackPanel>
 
         <StackPanel Orientation="Horizontal" Margin="0,0,-9,0">
-            <Button HorizontalAlignment="Left" Margin="240,375,0,0" VerticalAlignment="Top" Width="100" Height="34" FontWeight="Bold" FontSize="18">
+            <Button HorizontalAlignment="Left" Margin="240,375,0,0" VerticalAlignment="Top" Width="100" Height="34" FontWeight="Bold" FontSize="18" Click="EliminarButton_Click">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/Resources/elimina.png" Height="20"/>
                     <Label Content="Eliminar"/>                    
@@ -54,11 +54,11 @@
             </Button>
         </StackPanel>        
         
-        <TextBox TextWrapping="Wrap" Margin="75,20,206,375"/>
-        <TextBox TextWrapping="Wrap" Margin="105,75,20,320"/>
-        <TextBox TextWrapping="Wrap" Margin="105,126,20,269"/>
-        <TextBox TextWrapping="Wrap" Margin="105,178,20,217"/>
-        <TextBox TextWrapping="Wrap" Margin="105,229,20,166"/>
+        <TextBox x:Name="personaId" TextWrapping="Wrap" Margin="75,20,206,375"/>
+        <TextBox x:Name="nombre" TextWrapping="Wrap" Margin="105,75,20,320"/>
+        <TextBox x:Name="telefono" TextWrapping="Wrap" Margin="105,126,20,269"/>
+        <TextBox x:Name="cedula" TextWrapping="Wrap" Margin="105,178,20,217"/>
+        <TextBox x:Name="direccion"   TextWrapping="Wrap" Margin="105,229,20,166"/>
         
 
     </Grid>

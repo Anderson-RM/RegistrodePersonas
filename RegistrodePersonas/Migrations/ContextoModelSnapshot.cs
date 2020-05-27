@@ -6,8 +6,8 @@ using RegistrodePersonas;
 
 namespace RegistrodePersonas.Migrations
 {
-    [DbContext(typeof(contecto))]
-    partial class contectoModelSnapshot : ModelSnapshot
+    [DbContext(typeof(Contexto))]
+    partial class ContextoModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -15,9 +15,9 @@ namespace RegistrodePersonas.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.4");
 
-            modelBuilder.Entity("RegistrodePersonas.persona", b =>
+            modelBuilder.Entity("RegistrodePersonas.Personas", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("PersonaId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -36,9 +36,9 @@ namespace RegistrodePersonas.Migrations
                     b.Property<string>("telefono")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("Id");
+                    b.HasKey("PersonaId");
 
-                    b.ToTable("personas");
+                    b.ToTable("Personas");
                 });
 #pragma warning restore 612, 618
         }

@@ -7,9 +7,9 @@ using RegistrodePersonas;
 
 namespace RegistrodePersonas.Migrations
 {
-    [DbContext(typeof(contecto))]
-    [Migration("20200526040140_Inicial")]
-    partial class Inicial
+    [DbContext(typeof(Contexto))]
+    [Migration("20200527032107_Migracion")]
+    partial class Migracion
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -17,9 +17,9 @@ namespace RegistrodePersonas.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.4");
 
-            modelBuilder.Entity("RegistrodePersonas.persona", b =>
+            modelBuilder.Entity("RegistrodePersonas.Personas", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("PersonaId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -38,9 +38,9 @@ namespace RegistrodePersonas.Migrations
                     b.Property<string>("telefono")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("Id");
+                    b.HasKey("PersonaId");
 
-                    b.ToTable("personas");
+                    b.ToTable("Personas");
                 });
 #pragma warning restore 612, 618
         }

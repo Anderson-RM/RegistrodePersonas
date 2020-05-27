@@ -2,15 +2,15 @@
 
 namespace RegistrodePersonas.Migrations
 {
-    public partial class Inicial : Migration
+    public partial class Migracion : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "personas",
+                name: "Personas",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
+                    PersonaId = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     nombre = table.Column<string>(nullable: true),
                     telefono = table.Column<string>(nullable: true),
@@ -20,14 +20,14 @@ namespace RegistrodePersonas.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_personas", x => x.Id);
+                    table.PrimaryKey("PK_Personas", x => x.PersonaId);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "personas");
+                name: "Personas");
         }
     }
 }
